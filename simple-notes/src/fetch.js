@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: 'https://note-taking-i1i1.onrender.com',
     withCredentials: false
   });
 
@@ -32,7 +32,7 @@ export async function addNote(title, content) {
         content: content
       }
     return await axiosInstance
-      .post("http://localhost:8080/api/notes", newNote)
+      .post("https://note-taking-i1i1.onrender.com/api/notes", newNote)
       .then((response) => {
         return response.status;
       })
@@ -49,7 +49,7 @@ export async function updateNote(noteId, title, content) {
       content: content
     }
   return await axiosInstance
-    .put(`http://localhost:8080/api/notes/${noteId}`, updatedNote)
+    .put(`https://note-taking-i1i1.onrender.com/api/notes/${noteId}`, updatedNote)
     .then((response) => {
       return response.status;
     })
@@ -62,7 +62,7 @@ export async function login(email, password) {
   };
   console.log(loginDetails);
   return await axiosInstance
-    .post("http://localhost:8080/api/auth/authenticate", loginDetails)
+    .post("https://note-taking-i1i1.onrender.com/api/auth/authenticate", loginDetails)
     .then((response) => {
       console.log(response);
       return response;
@@ -76,7 +76,7 @@ export async function register(email, password) {
   };
   console.log(registerDetails);
   return await axiosInstance
-    .post("http://localhost:8080/api/auth/register", registerDetails)
+    .post("https://note-taking-i1i1.onrender.com/api/auth/register", registerDetails)
     .catch((error) => {
       return error.response;
     })

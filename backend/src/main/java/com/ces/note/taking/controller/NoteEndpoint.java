@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://note-taking-1.onrender.com/")
 @RestController
 @RequestMapping("/api/notes")
 public class NoteEndpoint {

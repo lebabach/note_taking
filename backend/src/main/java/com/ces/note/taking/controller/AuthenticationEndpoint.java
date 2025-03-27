@@ -24,7 +24,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://note-taking-1.onrender.com/")
 @RestController
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
