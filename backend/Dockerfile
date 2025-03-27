@@ -15,7 +15,7 @@ RUN chmod +x mvnw
 COPY . .
 
 # Build the application (this downloads dependencies first)
-RUN ./mvnw clean package -DskipTests
+RUN chmod +x mvnw && ./mvnw clean package -DskipTests
 
 # Expose the port Spring Boot runs on
 EXPOSE 8080
