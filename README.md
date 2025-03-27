@@ -40,3 +40,6 @@ npm run dev
 ![filter](filter.PNG)
 ### edit note
 ![edit](filter.PNG)
+### database
+![note](Note_database.PNG)
+![note2](tables.PNG)
