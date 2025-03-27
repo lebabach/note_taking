@@ -8,10 +8,10 @@ WORKDIR /app
 COPY mvnw pom.xml ./
 COPY .mvn .mvn/
 
-# Grant execution permission to the Maven wrapper
+# Grant execution permission to the Maven wrapper (Fixes "Permission denied" issue)
 RUN chmod +x mvnw
 
-# Copy the entire project
+# Copy the rest of the project
 COPY . .
 
 # Build the application (this downloads dependencies first)
@@ -20,5 +20,5 @@ RUN ./mvnw clean package -DskipTests
 # Expose the port Spring Boot runs on
 EXPOSE 8080
 
-# Start the Spring Boot application
-CMD ["./mvnw", "spring-boot:run"]
+# Run the Spring Boot application from the generated JAR
+CMD ["java", "-jar", "target/*.jar"]
