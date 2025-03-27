@@ -21,4 +21,4 @@ RUN chmod +x mvnw && ./mvnw clean package -DskipTests
 EXPOSE 8080
 
 # Run the Spring Boot application from the generated JAR
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["./mvnw", "spring-boot:run"]
