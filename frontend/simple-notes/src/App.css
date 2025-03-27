@@ -1,0 +1,85 @@
+#root {
+  width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  padding-top: 3rem;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.main-body {
+  max-width: 1280px;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+#note-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.note-container {
+  flex-shrink: 0;
+  min-height: 200px;
+  background-color: #3b3b3b;
+  padding: 10px;
+  padding-top: 15px;
+  min-width: 225px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-container {
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000000 !important;
+}
+
+.menu > li {
+  background-color: #3b3b3b;
+  padding: 10px;
+}
+
+#header-text {
+  text-shadow: 2px 2px 3px #000000;
+}
+.ql-container {
+  background-color: black;
+}
